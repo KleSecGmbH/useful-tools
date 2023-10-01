@@ -8,7 +8,7 @@ docker rm `docker ps -qa`
 docker rmi -f `docker images -qa `
 
 # Alle Volumes entfernen
-docker volume rm $(docker volume ls -qf dangling="true")
+docker volume rm $(docker volume ls -q)
 
 # Alle Netzwerke entfernen
 docker network rm `docker network ls -q`
